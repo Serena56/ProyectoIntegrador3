@@ -4,8 +4,7 @@ class MovieDB extends Component{
     constructor(){
         super();
         this.state = {
-            personajes:[],
-            masPersonajes:[],
+            peliculas:[],
             isLoaded: false,
         }
     }
