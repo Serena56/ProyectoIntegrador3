@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import MovieDb from './co'
+import MovieDb from './components/MovieDB/MovieDB'
 
 function App() {
   return (
