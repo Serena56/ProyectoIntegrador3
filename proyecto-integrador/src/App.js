@@ -1,5 +1,9 @@
 import React from 'react';
 //import MovieDB from './MovieDB/MovieDB';
+// import logo from './logo.svg';
+// import './App.css';
+// import MovieDb from './components/MovieDB/MovieDB'
+// >>>>>>> 1219398dd4c08bb11a34a5d8ffcc90b9450b0fbd
 
 function App() {
   return (
