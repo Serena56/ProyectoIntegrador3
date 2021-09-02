@@ -1,15 +1,31 @@
 import React from 'react';
-//import MovieDB from './MovieDB/MovieDB';
-// import logo from './logo.svg';
-// import './App.css';
-// import MovieDb from './components/MovieDB/MovieDB'
-// >>>>>>> 1219398dd4c08bb11a34a5d8ffcc90b9450b0fbd
+import MovieDB from './components/MovieDB/MovieDB';
+import Navbar from './components/NavigBar/NavigBar'
+
+//Estilos
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 function App() {
-  return (
+
+    const styleBoton = {
+        margin: 'auto',
+        textAlign: 'center',  
+        display: 'flex',
+        paddingTop: '10px',
+        paddingBottom: '10px',
+        marginTop: '25px',
+        marginBottom: '25px'
+    }
+        
+  
+    return (
     <div>
+        <Navbar />
+        {/*
+        Codigo comentado del codigo base
         <header>
-            <h1>Título/ Nombre de la app</h1>
             <section>
                 <p>Ordenar ASC/ DESC</p>
                 <i className="fas fa-th"></i>
@@ -20,163 +36,17 @@ function App() {
                 </form>
             </section>
         </header>
+        */}
         <main>
-            <button type="button">Cargar más tarjetas</button>
+            <button type="button" style={styleBoton} >Cargar más tarjetas</button>
             <section className="card-container">
                 <article>
-                    <section className="navigation">
-                        <div>
-                            <i className="fas fa-chevron-left"></i>
-                            <i className="fas fa-chevron-right"></i>
-                        </div>
-                        <i className="far fa-window-close"></i>
-                    </section>
-                    <main>
-                        <img src="./img/image-default.png" alt=""/>
-                        <h3>Título/ Nombre</h3>
-                        <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
-                        <section className="aditional-info">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        </section>
-                        <a href="">Ver más</a>
-                    </main>
-                </article>
-                <article>
-                    <section className="navigation">
-                        <div>
-                            <i className="fas fa-chevron-left"></i>
-                            <i className="fas fa-chevron-right"></i>
-                        </div>
-                        <i className="far fa-window-close"></i>
-                    </section>
-                    <main>
-                        <img src="./img/image-default.png" alt=""/>
-                        <h3>Título/ Nombre</h3>
-                        <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere
-                            laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta
-                            perspiciatis! Sint, laboriosam cum.</p>
-                        <section className="aditional-info">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        </section>
-                        <a href="">Ver más</a>
-                    </main>
-                </article>
-                <article>
-                    <section className="navigation">
-                        <div>
-                            <i className="fas fa-chevron-left"></i>
-                            <i className="fas fa-chevron-right"></i>
-                        </div>
-                        <i className="far fa-window-close"></i>
-                    </section>
-                    <main>
-                        <img src="./img/image-default.png" alt=""/>
-                        <h3>Título/ Nombre</h3>
-                        <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere
-                            laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta
-                            perspiciatis! Sint, laboriosam cum.</p>
-                        <section className="aditional-info">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        </section>
-                        <a href="">Ver más</a>
-                    </main>
-                </article>
-                <article>
-                    <section className="navigation">
-                        <div>
-                            <i className="fas fa-chevron-left"></i>
-                            <i className="fas fa-chevron-right"></i>
-                        </div>
-                        <i className="far fa-window-close"></i>
-                    </section>
-                    <main>
-                        <img src="./img/image-default.png" alt=""/>
-                        <h3>Título/ Nombre</h3>
-                        <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere
-                            laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta
-                            perspiciatis! Sint, laboriosam cum.</p>
-                        <section className="aditional-info">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        </section>
-                        <a href="">Ver más</a>
-                    </main>
-                </article>
-                <article>
-                    <section className="navigation">
-                        <div>
-                            <i className="fas fa-chevron-left"></i>
-                            <i className="fas fa-chevron-right"></i>
-                        </div>
-                        <i className="far fa-window-close"></i>
-                    </section>
-                    <main>
-                        <img src="./img/image-default.png" alt=""/>
-                        <h3>Título/ Nombre</h3>
-                        <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere
-                            laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta
-                            perspiciatis! Sint, laboriosam cum.</p>
-                        <section className="aditional-info">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        </section>
-                        <a href="">Ver más</a>
-                    </main>
-                </article>
-                <article>
-                    <section className="navigation">
-                        <div>
-                            <i className="fas fa-chevron-left"></i>
-                            <i className="fas fa-chevron-right"></i>
-                        </div>
-                        <i className="far fa-window-close"></i>
-                    </section>
-                    <main>
-                        <img src="./img/image-default.png" alt=""/>
-                        <h3>Título/ Nombre</h3>
-                        <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere
-                            laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta
-                            perspiciatis! Sint, laboriosam cum.</p>
-                        <section className="aditional-info">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        </section>
-                        <a href="">Ver más</a>
-                    </main>
-                </article>
-                <article>
-                    <section className="navigation">
-                        <div>
-                            <i className="fas fa-chevron-left"></i>
-                            <i className="fas fa-chevron-right"></i>
-                        </div>
-                        <i className="far fa-window-close"></i>
-                    </section>
-                    <main>
-                        <img src="./img/image-default.png" alt=""/>
-                        <h3>Título/ Nombre</h3>
-                        <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere
-                            laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta
-                            perspiciatis! Sint, laboriosam cum.</p>
-                        <section className="aditional-info">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-                        </section>
-                        <a href="">Ver más</a>
-                    </main>
+                    <MovieDB />
                 </article>
             </section>
         </main>
+        <br/>
+        <br/>
         <footer>
             <ul className="team">
                 <li>Nombre integrante 1</li>
@@ -187,5 +57,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
