@@ -69,7 +69,7 @@ class MovieDB extends Component{
             return(
                 <div>               
                     <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
-                    <h2> No hay peliculas que coincidan con tu busqueda</h2>
+                    <h2> No movies match your sort</h2>
                 </div>
             )
 
