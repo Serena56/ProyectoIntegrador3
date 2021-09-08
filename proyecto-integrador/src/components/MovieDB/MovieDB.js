@@ -65,6 +65,15 @@ class MovieDB extends Component{
           
 
     render(){
+        if(this.state.peliculas < 1) {
+            return(
+                <div>               
+                    <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
+                    <h2> No hay peliculas que coincidan con tu busqueda</h2>
+                </div>
+            )
+
+        } else {
         return(
             <div>
             <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
@@ -79,7 +88,7 @@ class MovieDB extends Component{
             </div>    
 
             
-        )
+        )}
         
             //   document.getElementById('root'), onClick=this.veintemas()}
      
