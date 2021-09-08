@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import Carts from '../Carts/Carts'
-import Row from 'react-bootstrap/Row'
+import Carts from '../Carts/Carts';
+import Row from 'react-bootstrap/Row';
+import BuscadorTarjetas from '../BuscadorTarjetas/BuscadorTarjetas';
 
 const styleBoton = {
     margin: 'auto',
@@ -18,6 +19,7 @@ class MovieDB extends Component{
         super();
         this.state = {
             peliculas:[],
+            peliculasIniciales: [],
             isLoaded: false,
             urlKey: '?api_key=6d28a46fc010c27c72c60e718140556a',
             urlPopularMovies: 'https://api.themoviedb.org/3/movie/popular',
@@ -32,7 +34,7 @@ class MovieDB extends Component{
                 this.setState({
                     peliculas: data.results,
                     isLoaded: true,
-                    peliculasImagen: data.results,
+                    peliculasIniciales: data.results,
             }) 
             })
             .catch( error => console.log(error));
@@ -53,11 +55,19 @@ class MovieDB extends Component{
             })
             
     }
+    filtrarPeliculas(textoAFiltrar){
+        let peliculasFiltradas = this.state.peliculasIniciales.filter( 
+            pelicula => pelicula.original_title.toLowerCase().includes(textoAFiltrar.toLowerCase()))
+        this.setState({
+            peliculas: peliculasFiltradas
+        })
+    }
           
 
     render(){
         return(
             <div>
+            <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
             <button type="button" style={styleBoton} onClick={() => this.addMorePopular()}>Cargar más tarjetas</button>
             <container>
                 <Row xs={1} md={5} className="g-4"> 
