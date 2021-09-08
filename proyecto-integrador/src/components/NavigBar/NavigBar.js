@@ -8,17 +8,16 @@ const NavigBar = () => {
 
         return(
             <div>
-                <Navbar bg="dark" variant="dark" expand='lg'>
+                <Navbar className="navbarHeader" bg="dark" variant="white" expand='lg'>
                 
-                    <Container>
+                    <Container className="containerHeader"> 
                     
                     
                     <Navbar.Brand href="#home">
-                        <img alt="" src="/popcorn.svg" width="30" height="30" className="d-inline-block align-top" />{' '}
-                    PelisPedia
-                    <Nav className="me-auto" >
-                     <Nav.Link href="#action1">Popular</Nav.Link>
-                        <Nav.Link href="#action1">Top rated</Nav.Link>
+                        <img alt="" src="/popcorn.svg" width="50" height="50" className="logoHeader" />{' '}PELISPEDIA
+                    <Nav className="ol-header" >
+                     <Nav.Link href="#action1" className="li-header" > POPULAR</Nav.Link>
+                        <Nav.Link href="#action1" className="li-header"> TOP RATED</Nav.Link>
                     </Nav>
                     </Navbar.Brand>
                     
