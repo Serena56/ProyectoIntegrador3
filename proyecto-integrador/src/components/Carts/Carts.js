@@ -7,16 +7,16 @@ import './Carts.css';
 const Carts = (props) => {
     console.log(props)
     return(
-    <div >        
+    <div className="card-container">        
         <Col>
-                <Card className='cartas'>
-                    <Card.Img width="75" height="125" className='cartasMainImg' variant="top" src={`http://image.tmdb.org/t/p/original/${props.data.poster_path}`} />
+                <Card className='movie-card'>
+                    <Card.Img className='movie-card-img' variant="top" src={`http://image.tmdb.org/t/p/original/${props.data.poster_path}`} />
                     <Card.Body>
-                        <Card.Title className='cartasTitulo'>{props.data.original_title}</Card.Title>
+                        <Card.Title className='movie-card-title'>{props.data.original_title}</Card.Title>
                         <Card.Text>
                         {props.data.overview}
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
+                        <Button variant="primary" className='movie-card-somewhereButton'>Go somewhere</Button>
                     </Card.Body>
                 </Card>
             </Col>
