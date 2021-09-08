@@ -46,13 +46,11 @@ class MovieDB extends Component{
         }, () => console.log(this.state.peliculas))
         fetch(this.state.urlPopularMovies+this.state.urlKey+'&page='+this.state.nmrDePagina)
             .then( response => response.json())
-            .then( data => {
-                console.log(data);
+            .then( data => {                
                 this.setState({
-                    peliculas: this.state.peliculas.concat(data.results),
-                 //   personajesIniciales: this.state.personajes.concat(data.results)
-                })
-            })
+                peliculas: this.state.peliculas.concat(data.results)                  
+                   })   
+                })         
             
     }
     filtrarPeliculas(textoAFiltrar){
