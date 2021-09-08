@@ -7,18 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-function App() {
-
-    const styleBoton = {
-        margin: 'auto',
-        textAlign: 'center',  
-        display: 'flex',
-        paddingTop: '10px',
-        paddingBottom: '10px',
-        marginTop: '25px',
-        marginBottom: '25px'
-    }
-        
+function App() {        
   
     return (
     <div>
@@ -38,7 +27,7 @@ function App() {
         </header>
         */}
         <main>
-            <button type="button" style={styleBoton} >Cargar más tarjetas</button>
+            
             <section className="card-container">
                 <article>
                     <MovieDB />

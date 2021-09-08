@@ -22,6 +22,19 @@
 box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
 }
 
+.descripcion{
+  width: 200px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.see-less{
+  display: none;
+}
+.see-more{
+  display: block;
+}
+
 
 /* .movie-card-somewhereButton{
   color: yellow;
