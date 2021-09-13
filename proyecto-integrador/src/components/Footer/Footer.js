@@ -8,7 +8,7 @@ const Footer = () => {
                 <li className="li-logo">
                 <a href="https://www.themoviedb.org/?language=es">
 
-                    <img src="/public/images/logoTMDb.png"></img> 
+                    <img src="/public/images/logoTMDb.png" alt=""></img> 
                     </a>
                     </li>
                 <li className="li-footer">
