@@ -29,6 +29,7 @@ class Carts extends Component {
         return(
         <div className="card-container">        
             <Col>
+            
                 <Card className='movie-card'>
                     <Card.Img className='movie-card-img' variant="top" src={`http://image.tmdb.org/t/p/original/${this.props.data.poster_path}`} />
                     <Card.Body>

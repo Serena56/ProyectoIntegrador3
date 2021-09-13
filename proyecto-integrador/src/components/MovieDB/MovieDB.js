@@ -82,6 +82,7 @@ class MovieDB extends Component{
             <div>
             <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
             <button type="button" style={styleBoton} onClick={() => this.addMorePopular()}>Cargar más tarjetas</button>
+             
             <container>
                 <Row xs={1} md={5} className="g-4"> 
                     {
