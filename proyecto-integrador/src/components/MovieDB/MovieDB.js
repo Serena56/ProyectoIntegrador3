@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Carts from '../Carts/Carts';
 import Row from 'react-bootstrap/Row';
 import BuscadorTarjetas from '../BuscadorTarjetas/BuscadorTarjetas';
+import './MovieDB.css';
 
 const styleBoton = {
     margin: 'auto',
@@ -78,7 +79,7 @@ class MovieDB extends Component{
             <button type="button" style={styleBoton} onClick={() => this.addMorePopular()}>Cargar más tarjetas</button>
              
             <container>
-                <Row xs={1} md={5} className="g-4"> 
+                <Row xs={1} md={5} className="movie-card"> 
                     {
                   this.state.peliculas.map( (characterData, idx) => <Carts data={characterData} key={characterData.name + idx}  />) 
                     }
@@ -98,3 +99,5 @@ class MovieDB extends Component{
 }}
 
 export default MovieDB
+
+// xs={1} md={5} 
