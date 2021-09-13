@@ -40,6 +40,7 @@ class Carts extends Component {
                         <Card.Text className={`${this.state.estado ? 'see-less': 'see-more'}`}>Popularity: {this.props.data.popularity}</Card.Text>
                         <Card.Text className={`${this.state.estado ? 'see-less': 'see-more'}`}>Release Date: {this.props.data.release_date}</Card.Text>
                         <Button variant="primary" className='movie-card-somewhereButton' onClick={() => this.verMas()}>{this.state.ver}</Button>
+                        <Button variant="primary" className='movie-card-somewhereButton' onClick={() => this.props.borrarPelicula(this.props.data.id)}>Borrar</Button>
                     </Card.Body>
                 </Card>
             </Col>
