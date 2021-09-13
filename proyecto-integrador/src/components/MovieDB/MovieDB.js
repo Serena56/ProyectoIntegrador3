@@ -61,6 +61,12 @@ class MovieDB extends Component{
             peliculas: peliculasFiltradas
         })
     }
+    borrarPeliculas(peliculaABorrar){
+        let cartasDespuesDeBorrar = this.state.peliculas.filter(peliculas => peliculas.id !== peliculaABorrar)
+        this.setState({
+            peliculas : cartasDespuesDeBorrar
+        })
+    }
           
 
     render(){
@@ -81,7 +87,7 @@ class MovieDB extends Component{
             <container>
                 <Row xs={1} md={5} className="movie-card"> 
                     {
-                  this.state.peliculas.map( (characterData, idx) => <Carts data={characterData} key={characterData.name + idx}  />) 
+                  this.state.peliculas.map( (characterData, idx) => <Carts data={characterData} key={characterData.name + idx} borrarPelicula={(peliculaABorrar)=>this.borrarPeliculas(peliculaABorrar)}  />) 
                     }
                 </Row>
             </container>
