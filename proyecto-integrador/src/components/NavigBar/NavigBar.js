@@ -18,6 +18,8 @@ const NavigBar = () => {
                     <Nav className="ol-header" >
                      <Nav.Link href="#action1" className="li-header" > POPULAR</Nav.Link>
                         <Nav.Link href="#action1" className="li-header"> TOP RATED</Nav.Link>
+
+                        
                     </Nav>
                     </Navbar.Brand>
                     

@@ -1,5 +1,6 @@
 import React from 'react';
 import MovieDB from './components/MovieDB/MovieDB';
+import Disposicion from "./components/Disposicion/Disposicion.js";
 import Navbar from './components/NavigBar/NavigBar'
 
 //Estilos
@@ -12,6 +13,9 @@ function App() {
     return (
     <div>
         <Navbar />
+
+        < Disposicion />
+        
         {/*
         Codigo comentado del codigo base
         <header>
