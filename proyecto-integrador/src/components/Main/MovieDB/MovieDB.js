@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Carts from '../Carts/Carts';
 import Row from 'react-bootstrap/Row';
 import BuscadorTarjetas from '../BuscadorTarjetas/BuscadorTarjetas';
+import Button from 'react-bootstrap/Button'
 
 const styleBoton = {
     margin: 'auto',
@@ -75,7 +76,7 @@ class MovieDB extends Component{
         return(
             <div>
             <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
-            <button type="button" style={styleBoton} onClick={() => this.addMorePopular()}>Cargar más tarjetas</button>
+            <br />
             <container>
                 <Row xs={1} md={5} className="g-4"> 
                     {
@@ -83,6 +84,8 @@ class MovieDB extends Component{
                     }
                 </Row>
             </container>
+            <Button variant="outline-primary" type="button" style={styleBoton} onClick={() => this.addMorePopular()}>Cargar más tarjetas</Button>
+            
             </div>    
 
             

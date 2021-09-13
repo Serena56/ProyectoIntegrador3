@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
     
         return(
-            <div>
+            <footer>
                 <ul className="teamFooter">
                 <li className="li-logo">
                 <a href="https://www.themoviedb.org/?language=es">
@@ -21,7 +21,7 @@ const Footer = () => {
                 <a href="https://www.themoviedb.org/?language=es"> Nicolas Cavalieri</a>
                     </li>
             </ul>
-            </div>
+            </footer>
         )
 }
 
