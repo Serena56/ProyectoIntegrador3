@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Carts from '../Carts/Carts';
 import Row from 'react-bootstrap/Row';
 import BuscadorTarjetas from '../BuscadorTarjetas/BuscadorTarjetas';
+import './MovieDB.css';
 
 const styleBoton = {
     margin: 'auto',
@@ -85,21 +86,17 @@ class MovieDB extends Component{
                 <button type="button" style={styleBoton} onClick={() => this.addMorePopular()}>Load more movies</button>
                 
                 <container>
-                    <Row xs={1} md={5} className="g-4"> 
-                        {this.state.isLoaded?
-                    this.state.peliculas.map( (characterData, idx) => <Carts data={characterData} key={characterData.name + idx} borrarPelicula={(peliculaABorrar)=>this.borrarPeliculas(peliculaABorrar)}/>) : <p>This may take a couple of seconds</p> 
+                    <Row xs={1} md={5} className="movie-card"> 
+                        {this.state.peliculas.map( (characterData, idx) => <Carts data={characterData} key={characterData.name + idx} borrarPelicula={(peliculaABorrar)=>this.borrarPeliculas(peliculaABorrar)}/>)
                         }
                     </Row>
                 </container>
-                </div>    
-
-                
+                </div>                   
             )}
         }else{
             return(
                 <p>Loading, this may take a couple of seconds</p>
             )
-
         }
         
             //   document.getElementById('root'), onClick=this.veintemas()}
@@ -111,3 +108,5 @@ class MovieDB extends Component{
 }}
 
 export default MovieDB
+
+// xs={1} md={5} 

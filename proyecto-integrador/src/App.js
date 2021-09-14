@@ -13,8 +13,7 @@ function App() {
     return (
     <div>
         <Navbar />
-        <main>
-            
+        <main>        
             <section className="card-container">
                 <article>
                     <MovieDB />
