@@ -69,31 +69,38 @@ class MovieDB extends Component{
           
 
     render(){
-        if(this.state.peliculas < 1) {
+        if(this.state.isLoaded){
+            if(this.state.peliculas < 1) {
+                return(
+                    <div>               
+                        <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
+                        <h2> No movies match your sort</h2>
+                    </div>
+                )
+
+            } else {
             return(
-                <div>               
-                    <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
-                    <h2> No movies match your sort</h2>
-                </div>
+                <div>
+                <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
+                <button type="button" style={styleBoton} onClick={() => this.addMorePopular()}>Load more movies</button>
+                
+                <container>
+                    <Row xs={1} md={5} className="g-4"> 
+                        {this.state.isLoaded?
+                    this.state.peliculas.map( (characterData, idx) => <Carts data={characterData} key={characterData.name + idx} borrarPelicula={(peliculaABorrar)=>this.borrarPeliculas(peliculaABorrar)}/>) : <p>This may take a couple of seconds</p> 
+                        }
+                    </Row>
+                </container>
+                </div>    
+
+                
+            )}
+        }else{
+            return(
+                <p>Loading, this may take a couple of seconds</p>
             )
 
-        } else {
-        return(
-            <div>
-            <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
-            <button type="button" style={styleBoton} onClick={() => this.addMorePopular()}>Cargar más tarjetas</button>
-             
-            <container>
-                <Row xs={1} md={5} className="g-4"> 
-                    {
-                  this.state.peliculas.map( (characterData, idx) => <Carts data={characterData} key={characterData.name + idx} borrarPelicula={(peliculaABorrar)=>this.borrarPeliculas(peliculaABorrar)}  />) 
-                    }
-                </Row>
-            </container>
-            </div>    
-
-            
-        )}
+        }
         
             //   document.getElementById('root'), onClick=this.veintemas()}
      

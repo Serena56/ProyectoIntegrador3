@@ -28,7 +28,7 @@ function App() {
                 <li className="li-logo">
                 <a href="https://www.themoviedb.org/?language=es">
 
-                    <img src="/public/images/logoTMDb.png"></img> 
+                    <img src="/public/images/logoTMDb.png" alt="Logo TMDB"></img> 
                     </a>
                     </li>
                 <li className="li-footer">
