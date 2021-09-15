@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieDB from './components/Main/MovieDB/MovieDB';
 import Disposicion from "./components/Disposicion/Disposicion.js";
-import Navbar from './components/NavigBar/NavigBar'
+import NavigBar from './components/Main/NavigBar/NavigBar';
 import Footer from './components/Footer/Footer';
 
 //Estilos
@@ -13,7 +13,7 @@ function App() {
   
     return (
     <div>
-        <Navbar />
+        <NavigBar />
 
         < Disposicion />
         
