@@ -13,7 +13,6 @@ function App() {
     return (
     <div>
         <Navbar />
-<<<<<<< HEAD
 
         < Disposicion />
         
@@ -31,8 +30,6 @@ function App() {
             </section>
         </header>
         */}
-=======
->>>>>>> 81487f1fc14b6e83dc12f6802754f87a5d7c3fc4
         <main>
             
             <section className="card-container">
