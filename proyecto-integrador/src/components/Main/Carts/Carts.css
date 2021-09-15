@@ -10,6 +10,14 @@
   box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);  
 }
 
+.card {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  height: 500px;
+  width: 200px;
+  margin: 10px;
+}
+
 .movie-card img{
   margin-bottom: 20px; 
 }
@@ -56,11 +64,4 @@ box-shadow: 0rem 0rem 10px 8px rgb(58 59 69 / 25%);
 } */
 
 
-.card {
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-  height: 500px;
-  width: 200px;
-  margin: 10px;
-}
 

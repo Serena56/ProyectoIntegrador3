@@ -1,21 +1,3 @@
-.cartasContenedor {
-    display: flex !important;
-    flex-wrap: wrap !important;
-
-}
-
-section.card-container {
-    display: flex !important;
-    flex-wrap: wrap !important;
-
-}
-
-main {
-    display: flex !important;
-    flex-wrap: wrap !important;
-
-}
-
 /* div.movie-card.row{
     display: flex !important;
     flex-wrap: wrap !important;
