@@ -1,5 +1,10 @@
 import React, {Component} from 'react'
 
+const buscador = {
+        margin: '50px',
+        textAlign: 'center'
+}
+
 class BuscadorTarjetas extends Component{
     constructor(props){
         super(props)
@@ -18,7 +23,7 @@ class BuscadorTarjetas extends Component{
     }
     render(){
         return( 
-            <div>
+            <div style={buscador}>
                 <form onSubmit={(event) => this.evitarSubmit(event)}>
                 <label>Peli:</label>
                 <input type="text" onChange={(event)=>this.controlarCambios(event)} value={this.state.filterBy} />

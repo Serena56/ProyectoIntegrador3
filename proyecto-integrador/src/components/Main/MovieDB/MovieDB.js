@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Carts from '../Carts/Carts';
 import BuscadorTarjetas from '../BuscadorTarjetas/BuscadorTarjetas';
+import './MovieDB.css'
 
 const styleBoton = {
     margin: 'auto',
@@ -10,11 +11,6 @@ const styleBoton = {
     paddingBottom: '10px',
     marginTop: '25px',
     marginBottom: '25px'
-}
-const cards = {
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-    flexDirection: 'column'
 }
 
 class MovieDB extends Component{
@@ -78,23 +74,16 @@ class MovieDB extends Component{
         } else {
         return(
             <div>
-            <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
-            <br />
-            <container>
-                
-                        
+            <BuscadorTarjetas className='buscador' filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
             
-                
-                <main className="cards" style={cards}>
+
+                <main className="cards">
                 {
                   this.state.peliculas.map( (characterData, idx) => <Carts data={characterData} key={characterData.name + idx}  />) 
                 }
                 </main>
                 
             
-                    
-                
-            </container>
             <button type="button" style={styleBoton} onClick={() => this.addMorePopular()}>Cargar más tarjetas</button>
             
             </div>    

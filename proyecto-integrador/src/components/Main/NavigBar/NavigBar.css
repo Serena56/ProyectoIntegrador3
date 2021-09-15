@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap');
+
+.Navbar {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.Navbar h4{
+    color: white;
+}
+
+.Navbar div{
+    align-items: flex-start;
+}
+
+
+.logo {
+    cursor: pointer;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color:#0008a9
+}
+

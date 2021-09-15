@@ -1,21 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
-.movie-card{
-  display: flex !important;
-  flex-wrap: wrap !important;
-  padding: 10px;
-  margin-bottom: 20px;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);  
-}
-
 .card {
   border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);  
   height: 500px;
   width: 200px;
   margin: 10px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .movie-card img{

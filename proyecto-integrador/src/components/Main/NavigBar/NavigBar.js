@@ -1,33 +1,24 @@
 import React from 'react'
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import Container from 'react-bootstrap/Container'
+import './NavigBar.css';
 
 
 const NavigBar = () => {
 
         return(
-            <div>
-                <Navbar className="navbarHeader" bg="dark" variant="white" expand='lg'>
-                
-                    <Container className="containerHeader"> 
-                    
-                    
-                    <Navbar.Brand href="#home">
-                        <img alt="" src="/popcorn.svg" width="50" height="50" className="logoHeader" />{' '}PELISPEDIA
-                    <Nav className="ol-header" >
-                     <Nav.Link href="#action1" className="li-header" > POPULAR</Nav.Link>
-                        <Nav.Link href="#action1" className="li-header"> TOP RATED</Nav.Link>
-
-                        
-                    </Nav>
-                    </Navbar.Brand>
-                    
-                    </Container>
-                </Navbar>
-
-
-            </div>
+            <header className="Navbar">
+            
+               <img className='logo' src="/popcorn.svg"/>
+                <h4>PelisPedia</h4> 
+           
+            
+                <nav>
+                    <ul className='nav_links'>
+                        <li><a href="#">Top Rated</a></li>
+                        <li><a href="#">Popular</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </nav>
+            </header>
         )
 
 }
