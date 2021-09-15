@@ -24,9 +24,9 @@ class Carts extends Component {
     }
     render(){
         return(        
-                <article className='movie-card card'>
+                <article className='card'>                   
                     <img className='movie-card-img' variant="top" src={`http://image.tmdb.org/t/p/original/${this.props.data.poster_path}`} alt=""/>
-                    <div>
+                    <div>   
                         <h2 className='movie-card-title'>{this.props.data.original_title}</h2>
                         <p className={`${this.state.estado ? 'descripcion': 'see-more'}`}>
                         {this.props.data.overview}

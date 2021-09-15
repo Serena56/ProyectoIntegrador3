@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Carts from '../Carts/Carts';
 import BuscadorTarjetas from '../BuscadorTarjetas/BuscadorTarjetas';
+import './MovieDB.css';
 
 const styleBoton = {
     margin: 'auto',
@@ -10,11 +11,6 @@ const styleBoton = {
     paddingBottom: '10px',
     marginTop: '25px',
     marginBottom: '25px'
-}
-const cards = {
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-    flexDirection: 'column'
 }
 
 class MovieDB extends Component{
@@ -64,16 +60,43 @@ class MovieDB extends Component{
             peliculas: peliculasFiltradas
         })
     }
+    borrarPeliculas(peliculaABorrar){
+        let cartasDespuesDeBorrar = this.state.peliculas.filter(peliculas => peliculas.id !== peliculaABorrar)
+        this.setState({
+            peliculas : cartasDespuesDeBorrar
+        })
+    }
           
 
     render(){
-        if(this.state.peliculas < 1) {
+        if(this.state.isLoaded){
+            if(this.state.peliculas < 1) {
+                return(
+                    <div>               
+                        <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
+                        <h2> No movies match your sort</h2>
+                    </div>
+                )
+
+            } else {
             return(
-                <div>               
-                    <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
-                    <h2> No movies match your sort</h2>
-                </div>
+                <div>
+                <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
+                <button type="button" style={styleBoton} onClick={() => this.addMorePopular()}>Load more movies</button>
+                
+                <container>
+                    <Row xs={1} md={5} className="movie-card"> 
+                        {this.state.peliculas.map( (characterData, idx) => <Carts data={characterData} key={characterData.name + idx} borrarPelicula={(peliculaABorrar)=>this.borrarPeliculas(peliculaABorrar)}/>)
+                        }
+                    </Row>
+                </container>
+                </div>                   
+            )}
+        }else{
+            return(
+                <p>Loading, this may take a couple of seconds</p>
             )
+<<<<<<< HEAD:proyecto-integrador/src/components/Main/MovieDB/MovieDB.js
 
         } else {
         return(
@@ -85,7 +108,7 @@ class MovieDB extends Component{
                         
             
                 
-                <main className="cards" style={cards}>
+                <main className="cards">
                 {
                   this.state.peliculas.map( (characterData, idx) => <Carts data={characterData} key={characterData.name + idx}  />) 
                 }
@@ -101,6 +124,9 @@ class MovieDB extends Component{
 
             
         )}
+=======
+        }
+>>>>>>> d6d77df0f637a20f0b4ea9bc86c05cc156f5983c:proyecto-integrador/src/components/MovieDB/MovieDB.js
         
             //   document.getElementById('root'), onClick=this.veintemas()}
      
@@ -111,3 +137,5 @@ class MovieDB extends Component{
 }}
 
 export default MovieDB
+
+// xs={1} md={5} 
