@@ -35,6 +35,7 @@ class Carts extends Component {
                         <p className={`${this.state.estado ? 'see-less': 'see-more'}`}>Popularity: {this.props.data.popularity}</p>
                         <p className={`${this.state.estado ? 'see-less': 'see-more'}`}>Release Date: {this.props.data.release_date}</p>
                         <button  className='movie-card-somewhereButton' onClick={() => this.verMas()}>{this.state.ver}</button>
+                        <button  className='movie-card-somewhereButton' onClick={() => this.props.borrarPelicula(this.props.data.id)}>Delete</button>
                     </div>
                 </article>
         )

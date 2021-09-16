@@ -60,36 +60,55 @@ class MovieDB extends Component{
             peliculas: peliculasFiltradas
         })
     }
+    borrarPeliculas(peliculaABorrar){
+        let cartasDespuesDeBorrar = this.state.peliculas.filter(peliculas => peliculas.id !== peliculaABorrar)
+        this.setState({
+            peliculas : cartasDespuesDeBorrar
+        })
+    }
+    resetMovies(){
+        this.setState({
+            peliculas: this.state.peliculasIniciales,
+            nmrDePagina: 2
+        })
+    }
           
 
     render(){
-        if(this.state.peliculas < 1) {
+        if(this.state.isLoaded){
+            if(this.state.peliculas < 1) {
+                return(
+                    <div>               
+                        <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
+                        <h2> No movies match your sort</h2>
+                    </div>
+                )
+
+            } else {
             return(
-                <div>               
-                    <BuscadorTarjetas filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
-                    <h2> No movies match your sort</h2>
-                </div>
-            )
-
-        } else {
-        return(
-            <div>
-            <BuscadorTarjetas className='buscador' filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
-            
-
-                <main className="cards">
-                {
-                  this.state.peliculas.map( (characterData, idx) => <Carts data={characterData} key={characterData.name + idx}  />) 
-                }
-                </main>
+                <div>
+                <BuscadorTarjetas className='buscador' filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
                 
-            
-            <button type="button" style={styleBoton} onClick={() => this.addMorePopular()}>Cargar más tarjetas</button>
-            
-            </div>    
 
-            
-        )}
+                    <main className="cards">
+                    {
+                    this.state.peliculas.map( (characterData, idx) => <Carts data={characterData} key={characterData.name + idx} borrarPelicula={(peliculaABorrar)=>this.borrarPeliculas(peliculaABorrar)}/>)
+                    }
+                    </main>
+                    
+                
+                <button type="button" style={styleBoton} onClick={() => this.addMorePopular()}>Load more movies</button>
+                <button type="button" style={styleBoton} onClick={() => this.resetMovies()}>Reset movies</button>
+                
+                </div>    
+
+                
+            )}
+        }else{
+            return(
+                <p>Loading, this may take a couple of seconds</p>
+            )
+        }
         
             //   document.getElementById('root'), onClick=this.veintemas()}
      
