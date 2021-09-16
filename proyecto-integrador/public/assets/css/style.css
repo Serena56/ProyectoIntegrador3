@@ -1,6 +1,6 @@
 
 /* Global */
-.card-container{
+/* .card-container{
     display: flex !important;
     flex-wrap: wrap !important;
     margin-top: 20px;
@@ -11,8 +11,8 @@
     width: 100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #858796;
-}
-.navbarHeader {
+} */
+/* .navbarHeader {
     box-shadow: -2px -2px 5px gray, 2px 2px 5px gray;
 }
 
@@ -57,10 +57,10 @@
   div.ol-header.navbar-nav :hover{
     color:white !important;
     text-decoration: underline;
-  }
+  } */
 
 
-footer {
+/* footer {
     background-color: #212529;
     overflow: hidden;
     width: 100%;
@@ -99,6 +99,6 @@ footer {
   footer a:hover {
     color:white;
     text-decoration: underline;
-  }
+  } */
   
 

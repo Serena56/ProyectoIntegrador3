@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import "./BuscadorTarjetas.css"
 
 const buscador = {
         margin: '50px',
@@ -25,9 +26,8 @@ class BuscadorTarjetas extends Component{
         return( 
             <div style={buscador}>
                 <form onSubmit={(event) => this.evitarSubmit(event)}>
-                <label>Peli:</label>
-                <input type="text" onChange={(event)=>this.controlarCambios(event)} value={this.state.filterBy} />
-                <input type="submit" value="Submit" />  
+                <input className="inputSearchBar" type="text" placeholder="Search a movie..." onChange={(event)=>this.controlarCambios(event)} value={this.state.filterBy} />
+                <input className="inputSearchBarSubmit" type="submit" value="Submit" />  
                 </form>
             </div>
         )
