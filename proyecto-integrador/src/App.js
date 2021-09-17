@@ -15,7 +15,6 @@ function App() {
     <div>
         <NavigBar />
 
-        <Disposicion/>
               
         <main>                       
             <MovieDB />                          

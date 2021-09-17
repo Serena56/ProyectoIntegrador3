@@ -23,7 +23,8 @@ class MovieDB extends Component{
             isLoaded: false,
             urlKey: '?api_key=6d28a46fc010c27c72c60e718140556a',
             urlPopularMovies: 'https://api.themoviedb.org/3/movie/popular',
-            nmrDePagina: 2
+            nmrDePagina: 2,
+            disposicionEnRow: true,
         }
     }
     componentDidMount(){
@@ -72,6 +73,18 @@ class MovieDB extends Component{
             nmrDePagina: 2
         })
     }
+
+    cambiarDisposicion(){
+        if (this.state.disposicionEnRow === true) {
+         this.setState({
+            disposicionEnRow: false
+         })
+        } else {
+         this.setState({
+            disposicionEnRow: true
+         })
+        }
+     }
           
 
     render(){
@@ -89,11 +102,14 @@ class MovieDB extends Component{
                 <div>
                 <BuscadorTarjetas className='buscador' filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
                 
-
-                    <main className="cards">
+                <button type="button" onClick={()=>this.cambiarDisposicion()}> CAMBIAR DISPOSICIÓN </button>
+                
+                    <main className={`cards ${this.state.disposicionEnRow ? "cambiaARow" : "cambiaAColumn"}`}>
+                    
                     {
                     this.state.peliculas.map( (characterData, idx) => <Carts data={characterData} key={characterData.name + idx} borrarPelicula={(peliculaABorrar)=>this.borrarPeliculas(peliculaABorrar)}/>)
                     }
+                    
                     </main>
                     
                 
