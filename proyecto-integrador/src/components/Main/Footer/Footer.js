@@ -16,10 +16,10 @@ class Footer extends Component {
             <a href="https://ar.linkedin.com/in/serena-mar%C3%ADa-dominguez-a48368146"> Serena Dominguez </a>
                  </li>
             <li className="li-footer">
-            <a href="#"> Mateo Pizzolo</a>
+            <a href="/"> Mateo Pizzolo</a>
                </li>
             <li className="li-footer">
-            <a href="#"> Nicolas Cavalieri</a>
+            <a href="/"> Nicolas Cavalieri</a>
                 </li>
         </ul>
         </footer>        
