@@ -15,14 +15,14 @@ const styleBoton = {
 
 class MovieDB extends Component{
 
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             peliculas:[],
             peliculasIniciales: [],
             isLoaded: false,
             urlKey: '?api_key=6d28a46fc010c27c72c60e718140556a',
-            urlPopularMovies: 'https://api.themoviedb.org/3/movie/popular',
+            urlPopularMovies: this.props.standardUrl,
             nmrDePagina: 2,
             disposicionEnRow: true,
         }
@@ -36,7 +36,7 @@ class MovieDB extends Component{
                     peliculas: data.results,
                     isLoaded: true,
                     peliculasIniciales: data.results,
-            }) 
+                }) 
             })
             .catch( error => console.log(error));
             
@@ -88,6 +88,7 @@ class MovieDB extends Component{
           
 
     render(){
+        console.log(this.props)
         if(this.state.isLoaded){
             if(this.state.peliculas < 1) {
                 return(
@@ -102,7 +103,7 @@ class MovieDB extends Component{
                 <div>
                 <BuscadorTarjetas className='buscador' filtrar={ (evento) => { this.filtrarPeliculas(evento) } }/>
                 
-                <button type="button" onClick={()=>this.cambiarDisposicion()}> CAMBIAR DISPOSICIÓN </button>
+                <button type="button" onClick={()=>this.cambiarDisposicion()}> CHANGE LAYOUT </button>
                 
                     <main className={`cards ${this.state.disposicionEnRow ? "cambiaARow" : "cambiaAColumn"}`}>
                     
@@ -125,13 +126,6 @@ class MovieDB extends Component{
                 <p>Loading, this may take a couple of seconds</p>
             )
         }
-        
-            //   document.getElementById('root'), onClick=this.veintemas()}
-     
-           // <Carts data={this.state.peliculas} /> 
-           // <button onClick={() => this.veintemas()}> mas </button>
-           
-
 }}
 
 export default MovieDB

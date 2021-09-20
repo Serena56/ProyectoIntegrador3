@@ -1,5 +1,4 @@
 import React from 'react';
-import MovieDB from './components/Main/MovieDB/MovieDB';
 import NavigBar from './components/Main/NavigBar/NavigBar';
 import Footer from './components/Main/Footer/Footer.js';
 
@@ -11,19 +10,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {        
   
     return (
-    <div>
-        <NavigBar />
-
-              
-        <main>                       
-            <MovieDB />                          
-        </main>
-
-        <br/>
-        <br/>
-            <Footer />
-        
-    </div>
+    <React.Fragment>
+    <NavigBar />
+    <br/>
+    <br/>
+    <Footer />
+    </React.Fragment>
   );
 }
 
