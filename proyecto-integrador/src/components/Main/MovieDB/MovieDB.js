@@ -31,7 +31,6 @@ class MovieDB extends Component{
         fetch(this.state.urlPopularMovies+this.state.urlKey)
             .then( response => response.json() )
             .then( data => {
-                console.log(data)
                 this.setState({
                     peliculas: data.results,
                     isLoaded: true,
@@ -87,8 +86,7 @@ class MovieDB extends Component{
      }
           
 
-    render(){
-        console.log(this.props)
+    render(){   
         if(this.state.isLoaded){
             if(this.state.peliculas < 1) {
                 return(
